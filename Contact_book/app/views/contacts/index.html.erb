@@ -1,0 +1,13 @@
+<h1>Contact Book</h1>
+
+<h3>List of contacts</h3>
+<ul>
+	<% @contacts_list.each do | contact| %>
+	<li>
+		<a href= <%= "/contacts/#{ contact.id }" %>><%= contact.name %></a><br>
+		<% end %>
+	</li>
+</ul>
+
+
+<a href="/contacts/new">Add a contact</a>

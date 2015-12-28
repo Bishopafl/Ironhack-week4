@@ -1,0 +1,30 @@
+<h1>Address Book</h1>
+
+<h2>Add entry</h2>
+
+<h3><% @contact.name %></h3>
+
+<%= form_for @contacts_list do |f| %>
+  <div> 
+    <%= f.label :name  %>
+    <%= f.text_field :name %>
+  </div>
+    <br>
+  <div>
+    <%= f.label :address  %>
+    <%= f.text_field :address %>
+  </div>
+  <div> 
+    <%= f.label :email_address  %>
+    <%= f.email_field :email_address %>
+  </div>
+    <br>
+  <div>
+    <%= f.label :phone_number  %>
+    <%= f.telephone_field :phone_number %>
+  </div>
+    <br>
+    <button type="submit">
+      Add Contact
+    </button>
+<% end %>
